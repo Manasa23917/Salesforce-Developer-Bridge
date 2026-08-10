@@ -1,0 +1,15 @@
+<template>
+
+    <lightning-card title="Eligible Jobs" icon-name="standard:job_profile">
+
+        <div class="slds-p-around_medium">
+
+            <p>
+                Your eligible placement opportunities will appear here.
+            </p>
+
+        </div>
+
+    </lightning-card>
+
+</template>
