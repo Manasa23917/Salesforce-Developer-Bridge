@@ -1,0 +1,19 @@
+public with sharing class ApplicationService {
+
+    public static Job_Application__c createApplication(
+        Id candidateId,
+        Id positionId
+    ) {
+        Job_Application__c applicationRecord =
+            new Job_Application__c();
+
+        applicationRecord.Candidate__c = candidateId;
+        applicationRecord.Position__c = positionId;
+        applicationRecord.Application_Date__c = Date.today();
+        applicationRecord.Status__c = 'Applied';
+
+        insert applicationRecord;
+
+        return applicationRecord;
+    }
+}
