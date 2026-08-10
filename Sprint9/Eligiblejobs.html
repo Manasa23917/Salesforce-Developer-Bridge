@@ -1,0 +1,50 @@
+<template>
+
+    <lightning-card title="Eligible Jobs">
+
+        <div class="slds-p-around_medium">
+
+            <template if:true={jobs.length}>
+
+                <template for:each={jobs} for:item="job">
+
+                    <article
+                        key={job.id}
+                        class="slds-card slds-p-around_medium slds-m-bottom_medium">
+
+                        <h2 class="slds-text-heading_medium">
+                            {job.companyName}
+                        </h2>
+
+                        <p>
+                            Position: {job.jobRole}
+                        </p>
+
+                        <div class="slds-m-top_medium">
+
+                            <lightning-button
+                                label="View Details"
+                                variant="brand">
+                            </lightning-button>
+
+                        </div>
+
+                    </article>
+
+                </template>
+
+            </template>
+
+            <template if:false={jobs.length}>
+
+                <p>
+                    No positions are currently available.
+                </p>
+
+            </template>
+
+        </div>
+
+    </lightning-card>
+
+</template>
