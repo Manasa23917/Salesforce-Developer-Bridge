@@ -1,0 +1,36 @@
+<template>
+
+    <lightning-card title="Eligible Jobs" icon-name="standard:job_profile">
+
+        <div class="slds-p-around_medium">
+
+            <article class="slds-card slds-p-around_medium">
+
+                <h2 class="slds-text-heading_medium">
+                    Microsoft
+                </h2>
+
+                <p>Software Engineer</p>
+
+                <p>Package: 12 LPA</p>
+
+                <p>Location: Hyderabad</p>
+
+                <p>Deadline: 18 August</p>
+
+                <div class="slds-m-top_medium">
+
+                    <lightning-button
+                        label="View Details"
+                        variant="brand">
+                    </lightning-button>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </lightning-card>
+
+</template>
