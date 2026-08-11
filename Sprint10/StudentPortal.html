@@ -1,0 +1,63 @@
+<template>
+
+    <lightning-card title="Available Jobs">
+
+        <div class="slds-p-around_medium">
+
+            <!-- Display all jobs -->
+            <template for:each={jobs} for:item="job">
+
+                <div key={job.Id} class="slds-m-bottom_medium">
+
+                    <c-job-card
+                        job={job}
+                        onviewdetails={handleViewDetails}
+                        onapply={handleApply}>
+                    </c-job-card>
+
+                </div>
+
+            </template>
+
+            <!-- Error message -->
+            <template if:true={error}>
+
+                <div class="slds-text-color_error slds-m-top_medium">
+                    Error loading jobs.
+                </div>
+
+            </template>
+
+            <!-- View Details result -->
+            <template if:true={selectedJobId}>
+
+                <div class="slds-m-top_medium slds-p-around_medium">
+
+                    <p>
+                        <strong>Selected Job ID:</strong>
+                        {selectedJobId}
+                    </p>
+
+                </div>
+
+            </template>
+
+            <!-- Apply result -->
+            <template if:true={applicationJobId}>
+
+                <div class="slds-m-top_medium slds-p-around_medium">
+
+                    <p>
+                        <strong>Application Job ID:</strong>
+                        {applicationJobId}
+                    </p>
+
+                </div>
+
+            </template>
+
+        </div>
+
+    </lightning-card>
+
+</template>
